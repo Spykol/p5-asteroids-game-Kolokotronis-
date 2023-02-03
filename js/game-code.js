@@ -27,7 +27,7 @@
 					Asteroids are re-used
 					When an asteroid falls of the screen (see if in display()) load() is called
 				*/
-				this.x = Math.floor(Math.random() * 591); // random X position
+				this.x = Math.floor(Math.random() * 1270); // random X position
 				this.asteroidSpeed = Math.floor(Math.random() * (this.maxSpeed - this.minSpeed + 1) + this.minSpeed); // random speed between min and max speed
 				this.y = 0;
 				
@@ -38,7 +38,7 @@
 			display() 
 			{
 				image(this.image, this.x, this.y+= this.asteroidSpeed); // each time an asteroid is displyed its position is updated (asteroids fall [y is increased])
-				if (this.y > 1270) // asteroid is dissappeared and load() is called to load again the asteroid 
+				if (this.y > 591) // asteroid is dissappeared and load() is called to load again the asteroid 
 				{
 					this.load();
 					return true;
